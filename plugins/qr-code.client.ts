@@ -3,7 +3,7 @@ import QRCodeStyling from "qr-code-styling";
 export default defineNuxtPlugin(() => {
   return {
     provide: {
-      qrCodeStyling: QRCodeStyling,
+      qrStyling: QRCodeStyling,
     },
   };
 });
