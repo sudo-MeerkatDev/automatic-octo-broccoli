@@ -1,7 +1,7 @@
 <template>
-  <nav>
-    <div></div>
-  </nav>
+  <NuxtLayout name="default">
+    
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts"></script>

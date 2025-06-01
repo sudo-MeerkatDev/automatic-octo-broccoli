@@ -3,7 +3,7 @@ import type QRCodeStylingType from "qr-code-styling";
 
 export function useQRCode(
   initialUrl: string,
-  fileExt: "png" | "jpeg" | "webp" = "png"
+  fileExt: "png" | "jpeg" | "webp" | "svg" = "png"
 ) {
   const qrCodeRef = ref<HTMLElement | null>(null);
   const url = ref(initialUrl);
@@ -19,6 +19,7 @@ export function useQRCode(
     qrCode.value = new QRCodeStyling({
       width: 500,
       height: 500,
+      type: "svg",
       data: url.value,
       image:
         "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
@@ -26,7 +27,12 @@ export function useQRCode(
         color: "#4267b2",
         type: "rounded",
       },
+      backgroundOptions: {
+        color: "#fff",
+      },
+
       imageOptions: {
+        saveAsBlob: true,
         crossOrigin: "anonymous",
         margin: 20,
       },

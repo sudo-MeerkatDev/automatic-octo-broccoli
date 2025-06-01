@@ -3,12 +3,12 @@
     <div>
       <Button>Click me</Button>
     </div>
-    <QRCode />
+    <!-- <QRCode /> -->
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import QRCode from "~/components/share/QRCode.vue";
+// import QRCode from "~/components/share/QRCode.vue";
 const layout = "default";
 </script>
 
